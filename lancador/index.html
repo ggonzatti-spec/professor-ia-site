@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lançador de Notas</title>
+<meta name="description" content="Lançador de Notas: baixar, instalar e atualizar o programa que lança as notas no aplicativoescolar.">
+<link rel="stylesheet" href="../estilo.css">
+<style>
+  ol { margin:0 0 10px; padding-left:22px; }
+  ol li { margin-bottom:6px; }
+  .versao { color:var(--muted); font-size:.92rem; margin-top:10px; }
+  .aviso { border-left:4px solid var(--accent); }
+  code { background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="../index.html">Professor IA</a><a href="#instalar">Instalar</a><a href="#atualizar">Atualizar</a><a href="#usar">Como usar</a></nav>
+  <h1>Lançador de Notas</h1>
+  <p class="sub">Lança as notas da sua planilha no aplicativoescolar, conferindo cada uma na Ata de Resultado. Versão de teste.</p>
+
+  <section>
+    <h2>Baixar</h2>
+    <p><a class="botao" id="baixar" href="LancadorDeNotas-2026.11.18.4.zip">Baixar o Lançador de Notas</a></p>
+    <p class="versao" id="versao">Versão 2026.11.18.4 · cerca de 16 MB · Windows 10 ou 11</p>
+  </section>
+
+  <section id="instalar">
+    <h2>Instalar (primeira vez)</h2>
+    <ol>
+      <li>Baixe o arquivo pelo botão acima. Ele vai para a pasta <strong>Downloads</strong>.</li>
+      <li>Clique com o botão direito no arquivo .zip e escolha <strong>Extrair tudo</strong> e depois <strong>Extrair</strong>.</li>
+      <li>Na pasta extraída, dê dois cliques em <strong>Instalar.cmd</strong>.</li>
+      <li>Se aparecer <em>“O Windows protegeu o computador”</em>, clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o programa ainda não tem assinatura digital.</li>
+      <li>Quando a janela preta disser <em>Pronto</em>, aperte uma tecla para fechá-la.</li>
+      <li>Abra o programa pelo atalho <strong>Lançador de Notas</strong> na Área de Trabalho.</li>
+    </ol>
+    <p>Não precisa ser administrador do computador. Você precisa do Google Chrome ou do Microsoft Edge, que já vem no Windows.</p>
+  </section>
+
+  <section id="atualizar" class="aviso">
+    <h2>Atualizar</h2>
+    <p><strong>Se você já usava o Lançador antes de 18/11/2026:</strong> a sua versão não sabe procurar atualizações neste endereço. Por isso, desta vez, atualize à mão:</p>
+    <ol>
+      <li>Feche o Lançador de Notas.</li>
+      <li>Baixe o arquivo novo pelo botão acima, extraia e dê dois cliques em <strong>Instalar.cmd</strong>, como na instalação.</li>
+      <li>O instalador troca o programa antigo pelo novo. <strong>Suas notas digitadas e os relatórios não são apagados</strong>, porque ficam em <code>Documentos\Lançador de Notas</code>.</li>
+      <li>Depois, você já pode apagar o .zip e a pasta extraída de Downloads.</li>
+    </ol>
+    <p><strong>Daqui para a frente a atualização é automática.</strong> Quando sair uma versão nova, o programa avisa ao abrir. Ao aceitar, ele baixa a versão nova, confere se o arquivo é o original, fecha e abre de novo já atualizado.</p>
+  </section>
+
+  <section id="usar">
+    <h2>Como usar</h2>
+    <ul>
+      <li>O programa abre o navegador. Entre no aplicativoescolar com o seu login. O Lançador não vê nem guarda a sua senha.</li>
+      <li>Escolha a turma e o trimestre. <strong>Cinza</strong> = nota que já está no sistema. <strong>Branco</strong> = digite. <strong>Verde</strong> = falta enviar.</li>
+      <li>Clique em <strong>Enviar</strong>. Cada nota é conferida no sistema e na Ata de Resultado.</li>
+      <li>O programa nunca altera uma nota que já existe e nunca finaliza o diário.</li>
+      <li>Ao fechar, a sessão é apagada do computador.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Dúvidas</h2>
+    <p>Fale com o Gustavo.</p>
+  </section>
+
+  <footer>Responsável: Gustavo Scarello Gonzatti · Encantado/RS · <a href="mailto:ggonzatti@gmail.com">ggonzatti@gmail.com</a></footer>
+</main>
+<script>
+  // O botão segue sempre a versão publicada no lancador.json (o mesmo arquivo que o programa lê).
+  fetch("lancador.json", { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (j) {
+      var v = JSON.parse(j.dados).versao;
+      var nome = v.url.split("/").pop();
+      document.getElementById("baixar").href = nome;
+      var d = v.numero.split(".");
+      document.getElementById("versao").textContent =
+        "Versão " + v.numero + " · publicada em " + d[2] + "/" + d[1] + "/" + d[0] + " · Windows 10 ou 11";
+    })
+    .catch(function () {});
+</script>
+</body>
+</html>
