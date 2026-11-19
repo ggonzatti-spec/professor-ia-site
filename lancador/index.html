@@ -22,8 +22,9 @@
 
   <section>
     <h2>Baixar</h2>
-    <p><a class="botao" id="baixar" href="LancadorDeNotas-2026.11.18.6.zip">Baixar o Lançador de Notas</a></p>
-    <p class="versao" id="versao">Versão 2026.11.18.6 · cerca de 59 MB · Windows 10 ou 11</p>
+    <p><a class="botao" href="Instalar-Lancador-de-Notas.exe">Baixar o instalador</a></p>
+    <p class="versao" id="versao">Versão 2026.11.19.1 · cerca de 43 MB · Windows 10 ou 11 (64 bits)</p>
+    <p class="versao">Sem instalar: <a id="baixar" href="LancadorDeNotas-2026.11.19.1.zip">pacote .zip</a> (extrair e rodar o Instalar.cmd).</p>
   </section>
 
   <section id="precos">
@@ -33,21 +34,20 @@
       <li><strong>10 dias grátis</strong> para experimentar, sem cadastro.</li>
       <li><strong>R$ 15 por mês</strong>, <strong>R$ 39 por trimestre</strong> ou <strong>R$ 120 por ano</strong>.</li>
     </ul>
-    <p>O programa avisa antes de o teste acabar. Depois disso, sem licença, ele continua abrindo suas notas, mas não envia ao sistema. Para liberar, envie seu código (Sistema → Meu código de licença) ao Gustavo.</p>
+    <p>O programa avisa antes de o teste acabar. Depois disso, sem licença, ele continua abrindo suas notas, mas não envia ao sistema.</p>
+    <p><strong>Para pagar:</strong> mande no WhatsApp do Professor IA, <a href="https://wa.me/5551994596179">(51) 99459-6179</a>, a mensagem <strong>lançador SEU-CÓDIGO mês</strong> (ou trimestre, ou ano). O Pix chega na hora e, quando você paga, o programa é liberado sozinho. O código está no programa, em <strong>Sistema → Meu código de licença</strong>.</p>
   </section>
 
   <section id="instalar">
-    <h2>Instalar (primeira vez)</h2>
+    <h2>Instalar</h2>
     <ol>
-      <li>Baixe o arquivo pelo botão acima. Ele vai para a pasta <strong>Downloads</strong>.</li>
-      <li>Clique com o botão direito no arquivo .zip e escolha <strong>Extrair tudo</strong> e depois <strong>Extrair</strong>.</li>
-      <li>Na pasta extraída, dê dois cliques em <strong>Instalar.cmd</strong>.</li>
+      <li>Clique em <strong>Baixar o instalador</strong>. O arquivo <strong>Instalar-Lancador-de-Notas.exe</strong> vai para a pasta Downloads.</li>
+      <li>Dê dois cliques nele.</li>
       <li>Se aparecer <em>“O Windows protegeu o computador”</em>, clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O aviso aparece porque o programa ainda não tem assinatura digital.</li>
-      <li>A janela preta pergunta <strong>onde guardar suas notas</strong>: digite <strong>1</strong> para guardar <strong>neste computador</strong> (computador pessoal) ou <strong>2</strong> para guardar <strong>no seu Google Drive</strong> (computador da escola ou compartilhado). Veja abaixo.</li>
-      <li>Quando a janela preta disser <em>Pronto</em>, aperte uma tecla para fechá-la.</li>
-      <li>Abra o programa pelo atalho <strong>Lançador de Notas</strong> na Área de Trabalho.</li>
+      <li>Clique em <strong>Avançar</strong> e em <strong>Concluir</strong>. O programa abre sozinho, e o atalho <strong>Lançador de Notas</strong> fica na Área de Trabalho.</li>
+      <li>Na primeira vez, o programa pergunta <strong>onde guardar suas notas</strong>: <strong>neste computador</strong> (computador pessoal) ou <strong>no meu Google Drive</strong> (computador da escola ou compartilhado). Veja abaixo.</li>
     </ol>
-    <p>Não precisa ser administrador do computador. Você precisa do Google Chrome ou do Microsoft Edge, que já vem no Windows.</p>
+    <p>Não precisa ser administrador do computador. Você precisa do Google Chrome ou do Microsoft Edge, que já vem no Windows. Para tirar o programa: Configurações → Aplicativos → Lançador de Notas → Desinstalar (suas notas não são apagadas).</p>
   </section>
 
   <section id="drive">
@@ -66,9 +66,8 @@
     <p><strong>Se você instalou o Lançador antes de 18/11/2026, ou instalou a versão 2026.11.18.4:</strong> atualize à mão desta vez. A primeira não sabe procurar atualizações neste endereço, e a 2026.11.18.4 não conecta ao aplicativoescolar.</p>
     <ol>
       <li>Feche o Lançador de Notas.</li>
-      <li>Baixe o arquivo novo pelo botão acima, extraia e dê dois cliques em <strong>Instalar.cmd</strong>, como na instalação.</li>
-      <li>O instalador troca o programa antigo pelo novo e pergunta onde guardar as notas. <strong>Suas notas digitadas e os relatórios não são apagados</strong>, porque ficam em <code>Documentos\Lançador de Notas</code>. Se escolher o Google Drive, depois use <strong>Sistema → Onde guardar minhas notas</strong> para levá-las ao Drive.</li>
-      <li>Depois, você já pode apagar o .zip e a pasta extraída de Downloads.</li>
+      <li>Baixe e rode o <strong>instalador</strong>, como na instalação. Ele troca o programa antigo pelo novo.</li>
+      <li><strong>Suas notas digitadas e os relatórios não são apagados</strong>, porque ficam em <code>Documentos\Lançador de Notas</code>. Para levá-las ao Google Drive, use <strong>Sistema → Onde guardar minhas notas</strong>.</li>
     </ol>
     <p><strong>Daqui para a frente a atualização é automática.</strong> Quando sair uma versão nova, o programa avisa ao abrir. Ao aceitar, ele baixa a versão nova, confere se o arquivo é o original, fecha e abre de novo já atualizado.</p>
   </section>
@@ -92,7 +91,7 @@
   <footer>Responsável: Gustavo Scarello Gonzatti · Encantado/RS · <a href="mailto:ggonzatti@gmail.com">ggonzatti@gmail.com</a></footer>
 </main>
 <script>
-  // O botão segue sempre a versão publicada no lancador.json (o mesmo arquivo que o programa lê).
+  // A versão e o link do .zip seguem o lancador.json (o mesmo arquivo que o programa lê); o instalador tem nome fixo.
   fetch("lancador.json", { cache: "no-store" })
     .then(function (r) { return r.json(); })
     .then(function (j) {
@@ -101,7 +100,7 @@
       document.getElementById("baixar").href = nome;
       var d = v.numero.split(".");
       document.getElementById("versao").textContent =
-        "Versão " + v.numero + " · publicada em " + d[2] + "/" + d[1] + "/" + d[0] + " · Windows 10 ou 11";
+        "Versão " + v.numero + " · publicada em " + d[2] + "/" + d[1] + "/" + d[0] + " · Windows 10 ou 11 (64 bits)";
     })
     .catch(function () {});
 </script>
