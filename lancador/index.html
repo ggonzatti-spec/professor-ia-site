@@ -22,7 +22,7 @@
 
   <section>
     <h2>Baixar</h2>
-    <p><a class="botao" href="Instalar-Lancador-de-Notas.exe">Baixar o instalador</a></p>
+    <p><a class="botao" href="https://github.com/ggonzatti-spec/professor-ia-site/releases/latest/download/Instalar-Lancador-de-Notas.exe">Baixar o instalador</a></p>
     <p class="versao" id="versao">Versão 2026.11.19.7 · cerca de 43 MB · Windows 10 ou 11 (64 bits)</p>
     <p class="versao">Sem instalar: <a id="baixar" href="LancadorDeNotas-2026.11.19.7.zip">pacote .zip</a> (extrair e rodar o Instalar.cmd).</p>
   </section>
@@ -96,8 +96,7 @@
     .then(function (r) { return r.json(); })
     .then(function (j) {
       var v = JSON.parse(j.dados).versao;
-      var nome = v.url.split("/").pop();
-      document.getElementById("baixar").href = nome;
+      document.getElementById("baixar").href = v.url;
       var d = v.numero.split(".");
       document.getElementById("versao").textContent =
         "Versão " + v.numero + " · publicada em " + d[2] + "/" + d[1] + "/" + d[0] + " · Windows 10 ou 11 (64 bits)";
